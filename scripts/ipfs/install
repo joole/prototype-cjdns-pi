@@ -10,6 +10,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 mkdir "$BASE_DIR/tmp"
 echo "$BASE_DIR/tmp directory has been created"
 if [ ! -f "$BASE_DIR/tmp/go-ipfs_${GO_IPFS_VERSION}_linux-arm.tar.gz" ];then
+    echo "file not exit will download it"
     wget "https://dist.ipfs.io/go-ipfs/${GO_IPFS_VERSION}/go-ipfs_${GO_IPFS_VERSION}_linux-arm.tar.gz" -O "$BASE_DIR/tmp/go-ipfs.tar.gz"
 else
     echo "file already exist, will decompress"
